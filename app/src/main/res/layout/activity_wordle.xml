@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wordle_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".WordleActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:padding="10dp">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:rowCount="6"
+            android:useDefaultMargins="true">
+
+            <View
+                android:id="@+id/viewGrid0_0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid0_0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ____________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid0_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid0_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ___________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid0_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid0_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _____________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid0_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid0_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid0_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid0_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid1_0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid1_0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid1_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid1_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid1_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid1_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid1_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid1_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ____________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid1_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="1"
+                android:layout_column="4"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid1_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="1"
+                android:layout_column="4"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ___________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid2_0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid2_0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ___________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid2_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid2_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _____________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid2_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid2_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ________________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid2_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid2_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid2_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="2"
+                android:layout_column="4"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid2_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="2"
+                android:layout_column="4"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _________________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid3_0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid3_0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ________________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid3_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid3_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid3_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid3_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ___________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid3_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid3_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid3_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="3"
+                android:layout_column="4"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid3_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="3"
+                android:layout_column="4"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid4_0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid4_0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _____________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid4_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid4_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid4_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid4_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid4_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="4"
+                android:layout_column="3"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid4_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="4"
+                android:layout_column="3"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid4_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="4"
+                android:layout_column="4"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid4_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="4"
+                android:layout_column="4"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- ______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid5_0"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid5_0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- __________________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid5_1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid5_1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid5_2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid5_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- __________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid5_3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="5"
+                android:layout_column="3"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid5_3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="5"
+                android:layout_column="3"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+            <!-- _______________________________________________________________ -->
+
+            <View
+                android:id="@+id/viewGrid5_4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_row="5"
+                android:layout_column="4"
+                android:alpha="0.2"
+                android:background="@drawable/box_outline" />
+
+            <TextView
+                android:id="@+id/textGrid5_4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="5"
+                android:layout_column="4"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-65dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/qButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/q" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/wButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/w" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/eButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/e" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/r" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/tButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/t" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/yButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/y" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/uButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="245dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/u" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/iButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="285dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/i" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/oButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="325dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/o" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/pButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="365dp"
+            android:layout_marginTop="550dp"
+            android:text="@string/p" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/aButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/a" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/s" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/d" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/f" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/gButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/g" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/hButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/h" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/jButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/j" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/kButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/k" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="350dp"
+            android:layout_marginTop="600dp"
+            android:text="@string/l" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/zButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="650dp"
+            android:text="@string/z" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/xButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="650dp"
+            android:text="@string/x" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="650dp"
+            android:text="@string/c" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/vButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="650dp"
+            android:text="@string/v" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="220dp"
+            android:layout_marginTop="650dp"
+            android:text="@string/b" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="260dp"
+            android:layout_marginTop="650dp"
+            android:text="@string/n" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mButton"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="300dp"
+            android:layout_marginTop="650dp"
+            android:text="@string/m" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/enterButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="305dp"
+            android:layout_marginTop="700dp"
+            android:text="@string/enter" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="700dp"
+            android:text="@string/delete" />
+
+        <Switch
+            android:id="@+id/modeToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="5dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="Endless Mode" />
+
+    </RelativeLayout>
+</RelativeLayout>

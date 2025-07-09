@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/okButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    tools:context=".GameCompleteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:background="@drawable/game_complete_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/gc_fragment_text"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:shadowColor="#333333"
+            android:shadowDx="8"
+            android:shadowDy="8"
+            android:shadowRadius="6"
+            android:text="@string/hello_blank_fragment"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/okStartNewButton"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ok_button"
+            android:text="OK"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gc_fragment_text" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
